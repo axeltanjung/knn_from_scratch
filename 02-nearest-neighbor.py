@@ -6,4 +6,6 @@ y = [0, 0, 1, 1]
 
 clf = KNeighborClassifier(n_neighbors=3)
 clf.fit(X, y)
-clf.predict(X)
+y_pred = clf.predict(X)
+
+print(y_pred)

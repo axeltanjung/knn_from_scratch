@@ -44,7 +44,7 @@ class KNeighborClassifier(NearestNeighbor):
         """
         # Cari tetangga dari data input X
         # Perbaiki bentuk input
-        X = np.array(X).copy
+        X = np.array(X).copy()
 
         # Menghitung weigths dari data
         if self.weights == 'uniform':
@@ -67,14 +67,19 @@ class KNeighborClassifier(NearestNeighbor):
         for i in range(X.shape[0]):
             # Extract tetangga terdekat dari data X_i
             neigh_y_i = neigh_y[i]
-            
+
+
             for j, class_ in enumerate(self.classes_):
                 # Hitung jumlah kelas yang ada didalam tetangga itu
                 i_class = (neigh_y_i == class_).astype(int)
                 class_count = np.sum(i_class)
-                print("-", j, class_count)
+
 
                 neigh_class[i,j] = class_count
-            print("")
+
+        # Buat prediksi
+        y_pred = np.empty(X.shape[0])
         for i in range(X.shape[0]):
-            print(np.argmax[neigh_class[i]])
+            y_pred[i] = np.argmax(neigh_class[i])
+
+        return y_pred
