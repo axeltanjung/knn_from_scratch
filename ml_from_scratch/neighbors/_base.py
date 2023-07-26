@@ -1,5 +1,30 @@
 import numpy as np
 
+def _get_weights(dist, weights):
+    """
+    Get the weigths from an array of distance
+    Assume weigths have already been validated
+
+    Parameters
+    ----------
+    dist : ndarray
+        The input distances
+
+    weigths : {'uniform', 'distance'}
+        The kind of weighted used
+
+    Returns
+    -------
+    weights_arr : array of same shape as 'dist'
+        If weigth=='uniform', the return None
+    """
+    if weights == "uniform":
+        weights_arr = None
+    else:
+        weights_arr = 1.0/(dist**2)
+
+    return weights_arr
+
 class NearestNeighbor:
     """
     Nearest neighbor base
@@ -61,7 +86,7 @@ class NearestNeighbor:
         sigma_diff = np.sum(abs_diff**self.p)
 
         # Akarkan hasil sigma
-        dist = sigma_diff**(1/sigma_diff)
+        dist = sigma_diff**(1/self.p)
 
         return dist
 
