@@ -61,7 +61,7 @@ class KNeighborRegressor(NearestNeighbor):
         X = np.array(X)
 
         # Calculate weigths
-        if self.weights == 'uniform':
+        if self.weigths == 'uniform':
             neigh_ind = self._kneighbors(X, 
                                          return_distance=False)
             neigh_dist = None 
@@ -69,14 +69,14 @@ class KNeighborRegressor(NearestNeighbor):
         else:
             neigh_ind, neigh_dist = self._kneighbors(X,
                                                      return_distance=True)
-        weigths = _get_weigths(neigh_dist, self.weigths)    
+        weigths = _get_weights(neigh_dist, self.weigths)    
         
         # Get the prediction
         _y = self._y
         if self.weigths == 'uniform':
             y_pred = np.mean(_y[neigh_ind], axis=1)
         else:
-            num = np.sum(_y[neigh_ind] * weights, axis=1)
+            num = np.sum(_y[neigh_ind] * weigths, axis=1)
             denom = np.sum(weigths, axis=1)
             y_pred = num/denom
 
