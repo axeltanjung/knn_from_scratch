@@ -19,33 +19,40 @@ Algoritma k-Nearest Neighbors (k-NN) merupakan salah satu metode machine learnin
 
 ### Keuntungan Model k-NN:
 
-**1. Sederhana dan Intuitif:
+1. Sederhana dan Intuitif:
+   
 Salah satu keuntungan utama dari model k-NN adalah kesederhanaan konsepnya. Algoritma ini hanya memerlukan langkah-langkah dasar, yaitu menghitung jarak antara data baru dengan data pelatihan yang ada. Hal ini membuatnya mudah dipahami dan diimplementasikan oleh para pemula sekalipun.
 
-**2. Tidak Bergantung pada Asumsi Distribusi Data:
+2. Tidak Bergantung pada Asumsi Distribusi Data:
+   
 Model k-NN tidak membuat asumsi tertentu tentang distribusi data. Ini membuatnya sangat berguna dalam situasi di mana data memiliki karakteristik yang kompleks atau tidak mengikuti distribusi tertentu. K-NN cenderung lebih fleksibel dalam menangani data yang beragam.
 
-**3. Pembaruan Model Mudah:
+3. Pembaruan Model Mudah:
+   
 Model k-NN dapat diperbarui dengan mudah saat ada data baru yang tersedia. Karena model ini tidak melibatkan proses pembelajaran berulang, Anda hanya perlu menambahkan data baru ke dalam dataset pelatihan yang ada.
 
-**4. Efektif untuk Data yang Tidak Terlalu Besar:
+4. Efektif untuk Data yang Tidak Terlalu Besar:
+   
 K-NN dapat memberikan hasil yang baik pada dataset yang relatif kecil. Ini membuatnya cocok untuk aplikasi di mana data terbatas, seperti pengenalan pola, analisis geospasial, dan lainnya.
 
 ### Kelemahan Model k-NN:
 
-**1. Sensitif terhadap Data Outlier:
+1. Sensitif terhadap Data Outlier:
+   
 Model k-NN rentan terhadap pengaruh data outlier, karena data outlier dapat mempengaruhi pemilihan tetangga terdekat. Ini dapat mengakibatkan hasil prediksi yang tidak akurat.
 
-**2. Kinerja yang Lambat pada Data Besar:
+2. Kinerja yang Lambat pada Data Besar:
+   
 Proses pencarian tetangga terdekat pada dataset besar dapat memakan waktu yang lama. K-NN cenderung memiliki kinerja yang lambat ketika dihadapkan pada data dengan dimensi tinggi atau jumlah data yang besar.
 
-**3. Pentingnya Memilih Parameter k dengan Tepat:
+3. Pentingnya Memilih Parameter k dengan Tepat:
+   
 Nilai k (jumlah tetangga terdekat) harus dipilih dengan hati-hati. Jika nilai k terlalu kecil, model bisa cenderung overfitting. Jika nilai k terlalu besar, model bisa cenderung underfitting.
 
-**4. Tidak Mampu Menangani Fitur Irrelevant:
+4. Tidak Mampu Menangani Fitur Irrelevant:
+   
 K-NN tidak memiliki mekanisme bawaan untuk mengatasi fitur yang tidak relevan atau berlebihan. Ini dapat menyebabkan performansi model menurun jika fitur-fitur semacam itu ada dalam dataset.
 
-**5. Pengaruh Terhadap Data yang Tidak Normal:
+5. Pengaruh Terhadap Data yang Tidak Normal:
+    
 K-NN rentan terhadap perubahan skala dan bentuk distribusi data. Jika data tidak terdistribusi secara normal, atau memiliki skala yang berbeda-beda, k-NN dapat memberikan hasil prediksi yang buruk.
-
-Dalam kesimpulannya, model k-NN memiliki keunggulan dalam kesederhanaan, fleksibilitas dalam mengatasi distribusi data yang kompleks, dan kemampuan pembaruan model yang mudah. Namun, model ini juga memiliki keterbatasan dalam hal sensitivitas terhadap outlier, kinerja yang lambat pada data besar, serta pengaruh parameter k dan karakteristik data tertentu. Oleh karena itu, penting bagi pengguna untuk memahami konteks dan karakteristik data sebelum memutuskan menggunakan model k-NN atau memilih alternatif lainnya.
