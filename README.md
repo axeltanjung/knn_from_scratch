@@ -56,3 +56,49 @@ K-NN tidak memiliki mekanisme bawaan untuk mengatasi fitur yang tidak relevan at
 5. Pengaruh Terhadap Data yang Tidak Normal:
     
 K-NN rentan terhadap perubahan skala dan bentuk distribusi data. Jika data tidak terdistribusi secara normal, atau memiliki skala yang berbeda-beda, k-NN dapat memberikan hasil prediksi yang buruk.
+
+## Component of Learning
+
+Komponen utama dari algoritma K-Nearest Neighbors (KNN) adalah sebagai berikut:
+
+1. Dataset: 
+
+Ini adalah kumpulan data yang digunakan untuk melatih model dan melakukan prediksi. Setiap data dalam dataset harus memiliki atribut yang digunakan untuk mengukur kedekatan antara titik data.
+
+2. Fungsi Jarak: 
+
+Fungsi ini digunakan untuk mengukur jarak antara titik data. Metrik jarak yang umum digunakan adalah Euclidean, Manhattan, atau Minkowski, tetapi dapat disesuaikan dengan masalah tertentu.
+
+3. Parameter K: 
+
+Parameter K adalah jumlah tetangga terdekat yang akan digunakan untuk membuat prediksi. Nilai K ini harus ditentukan sebelumnya, dan pemilihan yang tepat dapat memengaruhi kinerja model.
+
+4. Proses Pencarian Tetangga Terdekat: 
+
+Algoritma KNN mencari K tetangga terdekat dari data uji yang sedang diprediksi. Ini melibatkan perhitungan jarak antara data uji dan semua data pelatihan, lalu memilih K data pelatihan dengan jarak terpendek.
+
+5. Voting atau Bobot: 
+
+Setelah tetangga terdekat telah diidentifikasi, algoritma KNN dapat melakukan voting untuk mengklasifikasikan data uji (dalam kasus klasifikasi) atau menghitung rata-rata (dalam kasus regresi). Dalam kasus klasifikasi, prediksi dapat didasarkan pada mayoritas kelas tetangga terdekat.
+
+6. Klasifikasi atau Regresi: 
+
+Berdasarkan hasil voting atau perhitungan rata-rata, algoritma KNN akan mengklasifikasikan data uji ke dalam salah satu kelas atau menghasilkan nilai prediksi dalam kasus regresi.
+
+7. Evaluasi Model: 
+
+Setelah model KNN dilatih, perlu dievaluasi untuk mengukur seberapa baik ia melakukan prediksi. Metrik evaluasi yang umum digunakan termasuk akurasi, presisi, recall, F1-score, dan lainnya, tergantung pada jenis masalah yang dihadapi.
+
+8. Cross-Validation: 
+
+Untuk menghindari overfitting dan memastikan keandalan model, seringkali dilakukan validasi silang dengan membagi dataset menjadi subset pelatihan dan pengujian yang berbeda secara berulang-ulang.
+
+9. Normalisasi atau Standarisasi: 
+
+Terkadang, preprocessing data seperti normalisasi atau standarisasi diperlukan agar semua atribut memiliki pengaruh yang setara dalam perhitungan jarak.
+
+10. Pemilihan Metrik Jarak dan Nilai K yang Tepat: 
+
+Pemilihan metrik jarak dan nilai K yang sesuai dengan masalah yang dihadapi adalah langkah penting dalam mengimplementasikan KNN.
+
+Penanganan Data Tidak Lengkap atau Outlier: Dalam beberapa kasus, perlu diperhatikan bagaimana mengatasi data yang tidak lengkap atau nilai yang anomali (outlier).
